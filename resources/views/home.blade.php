@@ -1,7 +1,5 @@
 @extends('layouts.main')
 
-{{-- @dump($comics) --}}
-
 @section('main-content')
     <div>
         <table>
@@ -15,9 +13,13 @@
 
             @forelse ($comics as $comic )
                 <tr>
-                    <td>{{ $comic->title }}</td>
+                    <td>
+                        <a href="{{ route('comics.show', $comic->id) }}">
+                            {{ $comic->title }}
+                        </a>
+                    </td>
                     <td>{{ $comic->price }}</td>
-                    <td>{{ $comic->seies }}</td>
+                    <td>{{ $comic->series }}</td>
                     <td>{{ $comic->sale_date }}</td>
                     <td>{{ $comic->type }}</td>
                 </tr>
