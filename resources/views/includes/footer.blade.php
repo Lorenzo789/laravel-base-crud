@@ -1,3 +1,5 @@
 <footer>
-    <h3>Footer</h3>
+    <div class="container">
+        <p>powered by comics.com</p>
+    </div>
 </footer>
