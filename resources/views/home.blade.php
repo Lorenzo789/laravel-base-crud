@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main-content')
-    <div>
+    <div class="centered-table">
         <table>
             <tr>
                 <th>Title</th>
