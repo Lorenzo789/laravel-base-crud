@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  padding: 15px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul a {
+  color: white;
+  padding: 0px 15px;
+}
+
+header ul a li {
+  display: inline-block;
+}
+
+.centered-table {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+footer {
+  background-color: black;
+  padding: 15px;
+  color: white;
+}
+

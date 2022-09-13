@@ -1,1 +1,46 @@
 //
+@import './partials/generals';
+
+// ^ general classes ^ //
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+// ^ general classes ^ //
+
+
+
+// * start header * //
+header{
+    background-color: black;
+    padding: 15px;
+
+    ul{
+        list-style: none;
+
+        a{
+            color: white;
+            padding: 0px 15px;
+
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}
+// * end header * //
+
+// ! start section comics.blade ! //
+.centered-table{
+    margin: 0 auto;
+    width: 1200px;
+}
+// ! end section movie.blade ! //
+
+// & start footer & //
+footer{
+    background-color: black;
+    padding: 15px;
+    color: white;
+}
+// & end footer & //
