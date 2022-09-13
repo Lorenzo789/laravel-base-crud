@@ -1,8 +1,29 @@
 @extends('layouts.main')
 
+{{-- @dump($comics) --}}
 
 @section('main-content')
-    <h2>
-        Main content goes here
-    </h2>
+    <div>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Series</th>
+                <th>Sale_Date</th>
+                <th>Type</th>
+            </tr>
+
+            @forelse ($comics as $comic )
+                <tr>
+                    <td>{{ $comic->title }}</td>
+                    <td>{{ $comic->price }}</td>
+                    <td>{{ $comic->seies }}</td>
+                    <td>{{ $comic->sale_date }}</td>
+                    <td>{{ $comic->type }}</td>
+                </tr>
+            @empty
+
+            @endforelse
+        </table>
+    </div>
 @endsection
