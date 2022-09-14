@@ -36,6 +36,18 @@ header ul a li {
   margin: 0 auto;
 }
 
+.centered-table table td {
+  padding: 0 10px;
+}
+
+.centered-table table td a {
+  margin-left: 15px;
+}
+
+.centered-table table td a button {
+  padding: 5px;
+}
+
 form {
   padding: 10px;
 }

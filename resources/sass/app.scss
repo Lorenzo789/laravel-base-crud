@@ -37,6 +37,17 @@ header{
 
     table{
         margin: 0 auto;
+
+        td{
+            padding: 0 10px;
+            a{
+                margin-left: 15px;
+                
+                button{
+                    padding: 5px;
+                }
+            }
+        }
     }
 }
 // ! end section movie.blade ! //
