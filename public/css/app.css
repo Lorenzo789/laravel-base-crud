@@ -36,6 +36,18 @@ header ul a li {
   margin: 0 auto;
 }
 
+form {
+  padding: 10px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form div .w-textarea {
+  width: 100%;
+}
+
 footer {
   background-color: black;
   padding: 15px;

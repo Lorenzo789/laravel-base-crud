@@ -41,6 +41,20 @@ header{
 }
 // ! end section movie.blade ! //
 
+// ~ start form css ~ //
+form{
+    padding: 10px;
+
+    div{
+        margin-bottom: 15px;
+
+        .w-textarea{
+            width: 100%;
+        }
+    }
+}
+// ~ end form css ~ //
+
 // & start footer & //
 footer{
     background-color: black;
@@ -48,3 +62,4 @@ footer{
     color: white;
 }
 // & end footer & //
+
