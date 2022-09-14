@@ -12,7 +12,7 @@
         <div>
             <label for="description">Description</label>
             <textarea class="w-textarea" name="description" id="description" cols="30" rows="10">
-        
+                
             </textarea>
         </div>
 
@@ -41,6 +41,6 @@
             <input type="text" name="type">
         </div>
 
-        <input type="submit">
+        <input type="submit" value="send">
     </form>
 @endsection
