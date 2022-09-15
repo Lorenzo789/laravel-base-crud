@@ -44,13 +44,13 @@
 
         <div>
             <button class="btn-edit" type="submit">Edit</button>
-            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="form-delete">
-                @method('DELETE')
-                @csrf
-                <button type="submit" class="btn-delete">
-                    Delete
-                </button>
-            </form>
         </div>
+    </form>
+    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="form-delete">
+        @method('DELETE')
+        @csrf
+        <button type="submit" class="btn-delete">
+            Delete
+        </button>
     </form>
 @endsection

@@ -2,6 +2,11 @@
 
 @section('main-content')
     <div class="centered-table">
+        @if ( session('deleted') )
+            <div class="delete-alert">
+                <h1>{{ session('deleted') }} has removed succesfully</h1>
+            </div>
+        @endif
         <table>
             <tr>
                 <th>Title</th>
@@ -11,7 +16,7 @@
                 <th>Type</th>
             </tr>
 
-            @forelse ($comics as $comic )
+            @forelse ($comic as $comic )
                 <tr>
                     <td>
                         <a href="{{ route('comics.show', $comic->id) }}">
