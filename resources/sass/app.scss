@@ -122,3 +122,30 @@ footer{
         border-color: crimson;
     }
 }
+// ^ form-delete ^ //
+
+// * ambient variables * //
+.delete-alert{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: crimson;
+}
+
+.created-alert{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: green;
+}
+
+.edited-alert{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: green;
+}
+// * ambient variables * //
