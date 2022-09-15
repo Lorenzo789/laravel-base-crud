@@ -60,6 +60,16 @@ form div .w-textarea {
   width: 100%;
 }
 
+form .btn-edit {
+  padding: 5px 10px;
+}
+
+form .btn-delete {
+  padding: 5px;
+  background-color: crimson;
+  border-color: crimson;
+}
+
 footer {
   background-color: black;
   padding: 15px;
@@ -90,5 +100,15 @@ footer {
 
 .details-comic h4 {
   padding: 20px 0;
+}
+
+.form-delete {
+  display: inline;
+}
+
+.form-delete button {
+  padding: 5px;
+  background-color: crimson;
+  border-color: crimson;
 }
 

@@ -63,6 +63,16 @@ form{
             width: 100%;
         }
     }
+
+    .btn-edit{
+        padding: 5px 10px;
+    }
+
+    .btn-delete{
+        padding: 5px;
+        background-color: crimson;
+        border-color: crimson;
+    }
 }
 // ~ end form css ~ //
 
@@ -101,3 +111,14 @@ footer{
     }
 }
 // ! comic.show ! //
+
+// ^ form-delete ^ //
+.form-delete{
+    display: inline;
+
+    button{
+        padding: 5px;
+        background-color: crimson;
+        border-color: crimson;
+    }
+}
