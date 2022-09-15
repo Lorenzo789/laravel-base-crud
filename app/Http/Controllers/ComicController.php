@@ -93,14 +93,8 @@ class ComicController extends Controller
         $sendData = $request->all();
 
         $comics = Comic::findOrFail($id);
-        $comics->title = $sendData['title'];
-        $comics->description = $sendData['description'];
-        $comics->thumb = $sendData['thumb'];
-        $comics->price = $sendData['price'];
-        $comics->series = $sendData['series'];
-        $comics->sale_date = $sendData['sale-date'];
-        $comics->type = $sendData['type'];
-        $comics->save();
+        
+        $comics->update($sendData);
         
         return redirect()->route('comics.show', $comics->id);
     }
@@ -114,5 +108,8 @@ class ComicController extends Controller
     public function destroy($id)
     {
         //
+        Comic::destroy($id);
+
+        return redirect()->route('homepage');
     }
 }
