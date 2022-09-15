@@ -14,9 +14,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        $comic = Comic::all();
 
-        return view('home', compact('comics'));
+        return view('home', compact('comic'));
     }
 
     /**
@@ -51,7 +51,7 @@ class ComicController extends Controller
         $newComic->type = $sendData['type'];
         $newComic->save();
 
-        return redirect()->route('comics.show', $newComic->id);
+        return redirect()->route('comics.show', $newComic->id)->with('created', $sendData['title']);
     }
 
     /**
@@ -92,11 +92,14 @@ class ComicController extends Controller
         //
         $sendData = $request->all();
 
-        $comics = Comic::findOrFail($id);
+        $comic = Comic::findOrFail($id);
         
-        $comics->update($sendData);
+        $comic->update($sendData);
+
+        // $comics->fill($sendData);
+        // $comics->save();
         
-        return redirect()->route('comics.show', $comics->id);
+        return redirect()->route('comics.show', $comic->id)->with('edited', $comic->title);
     }
 
     /**
@@ -108,8 +111,9 @@ class ComicController extends Controller
     public function destroy($id)
     {
         //
-        Comic::destroy($id);
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
 
-        return redirect()->route('homepage');
+        return redirect()->route('homepage')->with('deleted', $comic->title);
     }
 }
