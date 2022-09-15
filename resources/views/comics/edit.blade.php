@@ -2,7 +2,7 @@
 
 @section('main-content')
     <form action="{{ route('comics.update', $comic->id) }}" method="post">
-        @method('PATCH')
+        @method('PUT')
         @csrf
 
         <div>
@@ -42,6 +42,6 @@
             <input type="text" name="type" value="{{ $comic->type }}">
         </div>
 
-        <input type="submit" value="send">
+        <input type="submit" value="Edit">
     </form>
 @endsection
