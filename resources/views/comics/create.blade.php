@@ -3,7 +3,7 @@
 @section('main-content')
     <form action="{{ route('comics.store') }}" method="post">
         @csrf
-
+        @dump($errors)
         @if ($errors->any())
             <div>
                 <ul>
