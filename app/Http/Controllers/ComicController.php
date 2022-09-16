@@ -46,9 +46,9 @@ class ComicController extends Controller
                 'title' => 'required|min:3|max:255',//funge
                 'description' => 'required|min:10|max:255',//funge
                 'thumb' => 'required|url',//funge
-                'price' => 'required|numeric',
+                'price' => 'required|numeric',//funge
                 'series' => 'min:5|max:255',//funge
-                'sale_date' => 'required|date_format:formatd M Y',
+                'sale_date' => 'date|after:1500/01/01',//funge
                 'type' => 'required|min:3|max:255'//funge
             ]
         );
