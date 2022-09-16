@@ -3,6 +3,7 @@
 @section('main-content')
     @include('comics.includes.formEditUpdate', [
         'routeName' => 'comics.update',
+        'data' => '$comic->id',
         'methodName' => 'PUT',
     ])
     <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="form-delete">
