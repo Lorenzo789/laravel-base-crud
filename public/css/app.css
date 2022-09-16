@@ -136,3 +136,15 @@ footer {
   background-color: green;
 }
 
+.validation-failed {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.validation-failed ul {
+  list-style: none;
+}
+
+.validation-failed ul li {
+  color: white;
+}
+

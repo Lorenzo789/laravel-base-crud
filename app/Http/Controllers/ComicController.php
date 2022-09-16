@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+    protected $validateRules = [
+        'title' => 'required|min:3|max:255',//funge
+        'description' => 'required|min:10',//funge
+        'thumb' => 'required|url',//funge
+        'price' => 'required|numeric',//funge
+        'series' => 'min:5|max:255',//funge
+        'sale-date' => 'required|date|after:1800/01/01',//funge
+        'type' => 'required|min:3|max:255'//funge
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -41,17 +51,7 @@ class ComicController extends Controller
         //https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.fastweb.it%2Fvar%2Fstorage_feeds%2FCMS%2Farticoli%2Ffc0%2Ffc0ae789bb35c92de8b36f24c93a2595%2F640x360.jpg&imgrefurl=https%3A%2F%2Fwww.fastweb.it%2Ffastweb-plus%2Fdigital-magazine%2Fcose-url%2F&tbnid=ltdVP9OhH_UOvM&vet=12ahUKEwi65K2k1pn6AhXByqQKHeatC-AQMygAegUIARDXAQ..i&docid=Tg3wdKI3O-8moM&w=640&h=360&q=url%20image&client=firefox-b-d&ved=2ahUKEwi65K2k1pn6AhXByqQKHeatC-AQMygAegUIARDXAQ
         $sendData = $request->all();
 
-        $validateData = $request->validate(
-            [
-                'title' => 'required|min:3|max:255',//funge
-                'description' => 'required|min:10|max:255',//funge
-                'thumb' => 'required|url',//funge
-                'price' => 'required|numeric',//funge
-                'series' => 'min:5|max:255',//funge
-                'sale-date' => 'required|date|after:1800/01/01',//funge
-                'type' => 'required|min:3|max:255'//funge
-            ]
-        );
+        $validateData = $request->validate($this->validateRules);
 
         $newComic = new Comic();
         $newComic->title = $sendData['title'];
@@ -102,6 +102,8 @@ class ComicController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $validateData = $request->validate($this->validateRules);
+
         $sendData = $request->all();
 
         $comic = Comic::findOrFail($id);

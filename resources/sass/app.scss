@@ -149,3 +149,16 @@ footer{
     background-color: green;
 }
 // * ambient variables * //
+
+// ? validation error ? //
+.validation-failed{
+    background-color: rgba($color: red, $alpha: 0.8);
+
+    ul{
+        list-style: none;
+
+        li{
+            color: white;
+        }
+    }
+}
