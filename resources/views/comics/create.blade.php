@@ -3,7 +3,7 @@
 @section('main-content')
     @include('comics.includes.formEditUpdate', [
         'routeName' => 'comics.store',
-        'data' => '$comic',
+        'data' => $comic,
         'methodName' => 'POST',
     ])
 @endsection
